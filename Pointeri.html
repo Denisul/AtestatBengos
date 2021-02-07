@@ -1,0 +1,169 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<style>
+/*stil la body*/
+	body{
+		font-family: Arial;
+		margin: auto;
+		background-color: orange;
+	animation-name: example;
+	animation-delay: 0s;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+}
+@keyframes example {
+  10%   {background-color: black;}
+  20%	{background-color: #1a0f00;}
+  25%  {background-color: #331f00;}
+  50%  {background-color: #4d2e00;}
+  75%	{background-color: #663d00;}
+  85%	{background-color: #804d00;}
+  90%	{background-color: #995c00;}
+  93%	{background-color: #b36b00;}
+  95%	{background-color: #cc7a00;}
+  97%	{background-color: #e68a00;}
+  100% {background-color: orange;}
+}
+/* titlu*/
+	.titlu{
+		padding: 60px;
+		text-align: center;
+		background: black;
+		color: white;
+		font-size: 60px;
+		
+		
+	}
+	/*linkuri*/
+	a:link{
+	text-decoration: none;
+	}
+	a:hover{
+	color: orange;
+	}
+	.subtitlu
+	{
+	color: white;
+	font-size:30px;
+	text-align:center;	
+	}
+	</style>
+	<style>
+	pre{
+	text-align: left;
+	margin-left: 200px;
+	font-size: 35px;
+	}
+	
+	p{
+	cursor: crosshair;
+	text-indent: 30px;
+	text-align: justify;
+	font-size:35px;
+	margin-left: 120px;
+	margin-right: 120px;
+	}
+	p.one{
+	cursor: none;
+	text-align: justify;
+	font-size:35px;
+	margin-left: 120px;
+	margin-right: 120px;
+	}
+/*Definitia*/
+	.cuprins{
+	padding: 30px;
+	background-color: orange;
+	font-size: 20px;
+	color: black;
+	align:center;
+	animation-name: example;
+	animation-delay: 0s;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	}
+	
+	</style>
+	
+	
+	
+	<style>
+	#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+  background-color: #804d00;
+}
+	</style>
+	
+	<body>
+<div class="titlu">Pointeri<p></p>
+	<div><a class="subtitlu" href='Index.html'>Home</a></div>
+
+</div>
+</body>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Hai sus</button>
+<div class="cuprins">
+	
+	
+	<p>Tipul de dată char* poartă numele de pointer la character. O variabilă de tip pointer la caracter, este capabiăl să reţină adresa de memorie a unui caracter. Numele unei variabile de tip şir de caractere (sau vector în general), reprezintă adresa de memorie a primului octet al şirului (vectorului).</p>
+	<p class="one">char * p , s[31] = "Atestat";</p>
+<p>Spunem că este un șir de caractere, dar practic s este tot un pointer. Valoarea sa este adresa primului element din șir, adică adresa lui s[0]. Observăm că de fapt, variabilele p și s sunt de același tip, pointer la char. Diferența dintre cele două variabile este că s memorează o adresă de memorie unde începe un șir de caractere (la acea adresă există o dată de tip char ) în timp ce p memorează o adresă aleatorie.</p>
+	<p>Pointerul p poate fi inițializat cu adresa unei date de tip char. O asemenea dată este orice element al unui șir de caractere, de exemplu orice element din s. Dacă p reprezintă adresa unui caracter dintr-un șir, atunci cu p se pot face toate operațiile care se pot face cu acel șir.</p>
+	<pre>Ex:
+#include <iostream>
+
+using namespace std;
+
+<code>int main(){
+    char * p , s[]="atestat";
+    cout << s << endl; // atestat
+    p = s;
+    cout << p << endl; // atestat
+    p ++;
+    cout << p << endl; // testat
+    return 0;</code>
+}
+	</pre>
+	<p>Pointerii rețin informația de la o anumită adresă. Astfel, știind că funcțiile strtok, strchr și strstr returnează adresa unor elemente, pentru a accesa informația de la acea adresă este recomandat să folosim un char *
+	</p>
+	</div>
+	<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+	</body>
+
+</html>

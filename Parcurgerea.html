@@ -1,0 +1,154 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<style>
+/*stil la body*/
+	body{
+		font-family: Arial;
+		margin: auto;
+		background-color: orange;
+	animation-name: example;
+	animation-delay: 0s;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+}
+@keyframes example {
+  10%   {background-color: black;}
+  20%	{background-color: #1a0f00;}
+  25%  {background-color: #331f00;}
+  50%  {background-color: #4d2e00;}
+  75%	{background-color: #663d00;}
+  85%	{background-color: #804d00;}
+  90%	{background-color: #995c00;}
+  93%	{background-color: #b36b00;}
+  95%	{background-color: #cc7a00;}
+  97%	{background-color: #e68a00;}
+  100% {background-color: orange;}
+}
+/* titlu*/
+	.titlu{
+		padding: 60px;
+		text-align: center;
+		background: black;
+		color: white;
+		font-size: 60px;
+		
+		
+	}
+	/*linkuri*/
+	a:link{
+	text-decoration: none;
+	}
+	a:hover{
+	color: orange;
+	}
+	.subtitlu
+	{
+	color: white;
+	font-size:30px;
+	text-align:center;	
+	}
+	</style>
+	<style>
+	pre{
+	text-align: left;
+	margin-left: 200px;
+	font-size: 35px;
+	}
+	
+	p{
+	cursor: none;
+	text-indent: 30px;
+	text-align: justify;
+	font-size:35px;
+	margin-left: 120px;
+	margin-right: 120px;
+	}
+/*Definitia*/
+	.cuprins{
+	padding: 30px;
+	background-color: orange;
+	font-size: 20px;
+	color: black;
+	align:center;
+	animation-name: example;
+	animation-delay: 0s;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	}
+	
+	</style>
+	
+	<style>
+	#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+  background-color: #804d00;
+}
+	</style>
+	<body>
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Hai sus</button>
+<div class="titlu">Parcurgerea șirurilor de caractere<p></p>
+	<div><a class="subtitlu" href='Index.html'>Home</a></div>
+
+</div>
+</body>
+</head>
+<body>
+<div class="cuprins">
+	
+	
+	<p>În numeroase situații este necesară analizarea fiecărui caracter din șir. Pentru aceasta este necesară o parcurgere a șirului; aceasta se face similar cu parcurgerea unui tablou oarecare. Diferența constă în faptul că, pentru șirul de caractere nu se cunoaște explicit lungimea. Ea poate fi determinată cu funcția strlen, dar se poate controla parcurgerea șirului știind că după ultimul caracter valid din șir apare caracterul nul '\0'.
+	<pre>char s[11];
+cin >> s; // se citeste un cuvant , fara spatii
+for(int i = 0 ; s[i] ; i ++)
+    cout << s[i] << " ";
+</pre>
+<p>Sau dacă apare caracterul nul dupa ultimul caracter din șir:</p>
+	<pre>char s[11];
+cin >> s; // se citeste un cuvant , fara spatii
+int i = 0;
+while(s[i] != '\0')
+{
+    cout << s[i] << " ";
+    i ++;
+}
+
+	</pre>
+	</div>
+	<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+</html>

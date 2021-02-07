@@ -1,0 +1,426 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<style>
+/*stil la body*/
+	body{
+		font-family: Arial;
+		margin: auto;
+		background-color: orange;
+	animation-name: example;
+	animation-delay: 0s;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+}
+@keyframes example {
+  10%   {background-color: black;}
+  20%	{background-color: #1a0f00;}
+  25%  {background-color: #331f00;}
+  50%  {background-color: #4d2e00;}
+  75%	{background-color: #663d00;}
+  85%	{background-color: #804d00;}
+  90%	{background-color: #995c00;}
+  93%	{background-color: #b36b00;}
+  95%	{background-color: #cc7a00;}
+  97%	{background-color: #e68a00;}
+  100% {background-color: orange;}
+}
+/* titlu*/
+	.titlu{
+		padding: 60px;
+		text-align: center;
+		background: black;
+		color: white;
+		font-size: 60px;
+		
+		
+	}
+	/*linkuri*/
+	a:link{
+	text-decoration: none;
+	}
+	a:hover{
+	color: orange;
+	}
+	.subtitlu
+	{
+	color: white;
+	font-size:30px;
+	text-align:center;	
+	}
+	</style>
+	<style>
+	
+	p{
+	cursor: crosshair;
+	text-indent: 30px;
+	text-align: justify;
+	font-size:35px;
+	margin-left: 0px;
+	margin-right: 10px;
+	}
+	pre{
+	cursor: crosshair;
+	text-indent: 30px;
+	text-align: justify;
+	font-size:35px;
+	margin-left: 0px;
+	margin-right: 10px;
+	}
+	
+/*Definitia*/
+	.cuprins{
+	padding: 30px;
+	background-color: orange;
+	font-size: 20px;
+	color: black;
+	align:center;
+	animation-name: example;
+	animation-delay: 0s;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	}
+	
+	</style>
+	
+	
+		<style>
+		* {
+  box-sizing: border-box;
+}
+	nav{
+		float: left;
+		width: 10%;
+		margin-top:20px;
+		margin-right: 40px;
+		cursor: crosshair;
+	text-indent: 30px;
+	text-align: justify;
+	font-size:30px;
+	
+		}
+	article{
+	
+	border-bottom-style:solid;
+	cursor: crosshair;
+	text-indent: 30px;
+	text-align: justify;
+	font-size:35px;
+	margin-left: 0px;
+	margin-right: 10px;
+	float: left;
+	padding: 20px;
+	width: 80%;
+	background-color: orange;
+	
+	animation-name: example;
+	animation-delay: 0s;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	}
+	section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+	
+	</style>
+	
+	<style>
+	#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+  background-color: #804d00;
+}
+	</style>
+	
+	<body>
+<div class="titlu">Funcții pentru șiruri de caractere<p></p>
+	<div><a class="subtitlu" href='Index.html'>Home</a></div>
+
+</div>
+</body>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Hai sus</button>
+<body>
+<section>
+	<nav >
+	STRLEN
+	</nav>
+	<article>
+		<code>int main{<br>
+cout << strlen("atestat"); // 7<br>
+char s[10]="elevi";<br>
+cout << strlen(s); // 5<br>
+cout << strlen(s + 2); //3<br>
+return 0;<br>
+}</code><br>
+Strlen(sir) returnează un număr întreg ce reprezintă lungimea unui şir de caractere, fără a număra terminatorul de şir.		
+	</article>
+	
+</section>
+<section>
+	<nav>
+		STRCHR
+	</nav>
+	<article>
+	<code id="article"> int main(){<br>
+char s[21]="atestat";<br>
+char * p = strchr(s , 'a');<br>
+cout << p; // atestat<br>
+return 0;}<br>
+</code>
+<p id="article">strchr(sir,c); – are rolul de a căuta caracterul c în șirul sir. Căutarea se face de la stânga la dreapta, iar funcția întoarce adresa subșirului care începe cu prima apariție a caracterului c. Dacă nu este găsit caracterul, funcția returnează 0. Diferența dintre adresa șirului inițial și cea a subșirului returnat reprezintă chiar poziția caracterului căutat în șirul dat.
+	</p></article>
+</section>
+<section>
+	<nav>
+		STRRCHR
+	</nav>
+	<article>
+	<code id="article">char a[100]=“crocodil”;<br>
+    cout << strrchr(a,’o’); //odil
+</code>
+<p id="article">Caută de la dreapta la stânga, caracterul car în şirul de caractere sir. Dacă este găsit, funcţia întoarce adresa subşirului care începe cu ultima apariţie a caracterului citit şi se termină cu carcterul nul. Dacă nu este găsit intoarce o expresie de tip char* cu valoarea 0.
+	</p></article>
+</section>
+
+<section>
+	<nav>
+		STRCPY
+	</nav>
+	<article>
+	<pre> <code id="article">char a[100]=“lucrare”,b[100]=“atestat”;
+    strcpy(a,b); 
+    cout<< “sirul a: ”<< a << endl; //atestat
+    cout<< “sirul b: ”<< b << endl; //atestat
+</code></pre>
+<p id="article">Copiază şirul de la adresa sursă la adresa destinaţie. Copierea se termină la întâlnirea caracterului nul. Funcţia returnează adresa şirului destinaţie. Simulează operaţia de atribuire a=b.
+</p></article>
+</section>
+
+<section>
+	<nav>
+		STRNCPY
+	</nav>
+	<article>
+	 <code id="article">char a[100]=“lucrare”,b[100]=“atestat”;<br>
+    strncpy(a,b,4);   <br>
+    cout << “sirul a: ” << a << endl; // ates<br>
+    cout << “sirul b: ” << b << endl; // atestat<br>
+</code>
+<p>Verifică dacă un caracter este cifră. Returnează o valoare diferită de zero dacă parametrul este cifră, 0 în caz contrar.
+	</p></article>
+</section>
+
+<section>
+	<nav>
+		STRCAT
+	</nav>
+	<article>
+	 <code id="article">char a[100]=“lucrare”,b[100]=“atestat e”;<br>
+    strcat(a,b);   <br>
+    cout << “sirul a:” << a << endl; //lucrareatestat<br>
+    cout << “sirul b:” << b << endl; //atestat<br>
+</code>
+<p>Adaugă şirului de la adresa destinaţie, înaintea caracterului nul şirul de la adresa sursă. Şirul de la adresa sursă rămâne nemodificat. Operaţia se numeşte concatenare. La adresa destinaţie vom avea şirul destinaţie urmat de şirul sursă. Şirul destinaţie are lungimea egală cu suma lungimilor şirurilor.
+</p></article>
+</section>
+
+<section>
+	<nav>
+		STRNCAT
+	</nav>
+	<article>
+	 <code id="article">char a[100]=“lucrare ”,b[100]=“atestat”;<br>
+    strncat(a,b,3);   <br>
+    cout << “sirul a: ” << a << endl; //lucrare ate<br>
+    cout << “sirul b: ” << b << endl; //atestat<br>
+</code>
+<p>Adaugă şirului de la adresa destinaţie, înaintea caracterului nul primii n octeţi ai şirul de la adresa sursă. Şirul de la adresa sursă rămâne nemodificat. Funcţia returnează adresa de început a şirului destinaţie.
+</p></article>
+</section>
+
+<section>
+	<nav>
+		STRSTR
+	</nav>
+	<article>
+	 <code id="article">char a[100]=“azi ele fac cafele”,b[20]= “ele”;<br>
+    cout << strstr(a,b); //ele fac cafele
+
+</code>
+<p>Identifică dacă şirul sir2 este subşir(caractere succesive) al şirului sir1. dacă este găsit, funcţia returnează adresa sa de început în cadrul şirului s1, altfel returnează 0. Căutarea se face de la stânga la dreapta. Dacă sir2 apare de mai multe ori, returnează adresa primei sale apariţii.
+</p></article>
+</section>
+
+<section>
+	<nav>
+		STRTOK
+	</nav>
+	<article>
+	 <code id="article">char a[100],sep[]=“, ;.?!”,*p;<br>
+   cin.get(a,100);<br>
+   p=strtok(a,sep);<br>
+   while (p)<br>
+   { cout << p <<endl;<br>
+     p=strtok(NULL,sep);<br>
+	}<br>
+</code>
+<p>Are rolul de a separa șirul sir1 în mai multe șiruri (cuvinte) separate între ele prin unul sau mai multe caractere cu rol de separator. Șirul sir2 este alcătuit din unul sau mai multe caractere cu rol de separator. Funcția strtok acționează în felul următor:
+<p>Primul apel trebuie să fie de forma strtok(sir1,sir2); funcția întoarce adresa primului caracter al primei entități. După prima entitate, separatorul este înlocuit automat cu caracterul nul.
+</p><p>Următoarele apeluri sunt de forma strtok(NULL,sir2); de fiecare dată, funcția întoarce adresa de început a următoarei entități, adăugând automat după ea caracterul nul.
+</p><p>Când șirul nu mai conține entități, funcția returnează adresa nulă.
+</p></article>
+</section>
+
+<section>
+	<nav>
+		STRCMP
+	</nav>
+	<article>
+	 <code id="article">char a[20]=“adriana”,b[20]= “ana”, c[20]= “Ana”;<br>
+cout<< strcmp(a,b); //<0 deoarece ‘a’=’a’ si ‘d’<’n’ => “adriana”<“ana”<br>
+cout<< strcmp(a,c); //>0 deoarece ‘a’>’A’ <br>
+cout<< strcmp(b,c); //>0 deoarece ‘a’>’A’<br>
+
+</code>
+<p>Compară cele două şiruri de caractere. Valoarea returnată este:</p>
+<p><0 dacă sir1<sir2</p>
+<p>=0 dacă sir1 =sir2</p>
+<p>0 dacă sir1 >sir2</p>
+Funcţia face distincţie între literele mari și literele mici. Compararea şirurilor se realizează comparând de la stânga la dreapta caracter cu caracter. Un şir este mai mic dacât altul dacă figurează în dicţionar înaintea lui.
+</p></article>
+</section>
+
+<section>
+	<nav>
+		STRICMP
+	</nav>
+	<article>
+	 <code id="article">char b[20]= “ana”, c[20]= “Ana”;<br>
+cout<<stricmp(b,c); //==0
+</code>
+<p>Are acelaşi efect ca şi strcmp dar nu face diferenţă între literele mari şi literele mici.
+</p></article>
+</section>
+
+<section>
+	<nav>
+		STRNCMP
+	</nav>
+	<article>
+	 <code id="article">char b[20]= “adriana”, c[20]= “adina”;<br>
+    cout<<strncmp(b,c,2); //==0
+
+</code>
+<p>Are acelaşi efect ca şi strcmp dar compara doar primele n caractere din cele doua siruri.
+</p></article>
+</section>
+
+<section>
+	<nav>
+		STRNCMPI
+	</nav>
+	<article>
+	 <code id="article">char b[20]= “adriana”, c[20]= “ADina”;<br>
+    cout<<strncmpi(b,c,2); //==0
+
+
+</code>
+<p>Are acelaşi efect ca şi strncmp dar nu face diferenţă între literele mari şi literele mici.
+</p></article>
+</section>
+
+<section>
+	<nav>
+		STRSPN
+	</nav>
+	<article>
+	 <code id="article">strspn(“AB2def”,”1B3AQW”); //returneaza 2, pentru ca primele 2 caractere „A‟ si „B‟ din sir1 se gasesc in sir2 .<br>
+strspn(“FAB2def”,”16A32BF”); // returneaza 0, deoarece caracterul „F‟ cu care incepe sir1 nu se gaseste in sir2.
+
+</code>
+<p>Are rolul de a returna numărul de caractere ale șirului sir1 (caractere consecutive care încep obligatoriu cu primul caracter) care se găsesc în șirul sir2 .
+</p></article>
+</section>
+
+<section>
+	<nav>
+		STRUPR
+	</nav>
+	<article>
+	 <code id="article">char a[100]=“1 atestat”;<br>
+    cout<<strupr(a); //1 ATESTAT
+
+</code>
+<p>Transformă un şir de caractere din litere mici în litere mari. Restul caracterelor rămân nemodificate.
+</p></article>
+</section>
+
+<section>
+	<nav>
+		STRLWR
+	</nav>
+	<article>
+	 <code id="article">char a[100]=“1 ATESTAT”;<br>
+    cout<<strlwr(a); //1 atestat 
+
+</code>
+<p>Transformă un şir de caractere din litere mari în litere mici. Restul caracterelor rămân nemodificate.
+</p></article>
+</section>
+
+<section>
+	<nav>
+		STRBRK
+	</nav>
+	<article>
+<p>strbrk(sir1,sir2);</p>
+ <p>Caută primul caracter al șirului sir1 în sir2 . Dacă este găsit, returnează adresa sa din cadrul șirului sir1 și execuția se termină. Altfel, se trece la pasul următor. 
+ </p><p>Caută al doilea caracter al șirului sir1 în sir2 . Dacă este găsit, returnează adresa sa din cadrul șirului sir1 și execuția se termină. Altfel, se trece la pasul următor. 
+ <br>…
+ </p><p>Dacă nici un caracter al șirului sir1 nu aparține șirului sir2 , funcția returnează adresa nulă.
+</p></article>
+</section>
+
+</body>
+	<script>
+	
+	
+//buton
+var mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+	</body>
+
+</html>
